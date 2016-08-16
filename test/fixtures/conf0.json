@@ -1,0 +1,7 @@
+{
+  "foo": "bar",
+  "baz": {
+    "one": 42,
+    "two": ["Hello", "World"]
+  }
+}
