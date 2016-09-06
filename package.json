@@ -1,6 +1,6 @@
 {
   "name": "tiny-conf-plugin-file",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "tiny-conf plugin to load data from a file in the store",
   "main": "tiny-conf-plugin-file.js",
   "scripts": {
@@ -19,10 +19,10 @@
   "devDependencies": {
     "expect": "^1.20.2",
     "mocha": "^3.0.2",
-    "tiny-conf": "1.0.0"
+    "tiny-conf": "^1.0.0"
   },
   "peerDependencies": {
-    "tiny-conf": "1.0.0"
+    "tiny-conf": "^1.0.0"
   },
   "author": "Maxime Tricoire <max.tricoire@gmail.com>",
   "license": "MIT",
