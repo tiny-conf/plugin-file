@@ -1,6 +1,8 @@
 # tiny-conf-plugin-file
 
-Will store the content of `filepath` JSON to the given `tiny-conf` store
+Will store the content of `filepath` JSON to the given `tiny-conf` store.  
+Enhances the `.save()` method to store the current in-memory content to the
+given file.
 
 ### Usage
 ```js
@@ -34,4 +36,12 @@ require('tiny-conf-plugin-file')(conf, filepath);
 conf.get('foo');     // 'bar'
 conf.get('baz.one'); // 42
 conf.get('baz.two'); // ['Hello', 'World']
+
+conf.set('baz', 'new value');
+
+conf.save()
+  .then(() => {
+    conf.get('baz'); // 'new value'
+    // 'path/to/config.json' is also updated with the new values
+  });
 ```
