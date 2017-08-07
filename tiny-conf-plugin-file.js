@@ -3,7 +3,12 @@
 var fs = require('fs');
 
 module.exports = function (config, filepath) {
-  config.set(JSON.parse(fs.readFileSync(filepath, 'utf8')));
+  try {
+    var data = fs.readFileSync(filepath, 'utf8');
+    config.set(JSON.parse(data));
+  } catch (ignore) {
+    // ignore faulty config files
+  }
 
   config.save = function saveToFile(key) {
     return new Promise(function (resolve, reject) {

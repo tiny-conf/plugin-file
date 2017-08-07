@@ -1,6 +1,6 @@
 {
   "name": "tiny-conf-plugin-file",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "tiny-conf plugin to load data from a file in the store",
   "main": "tiny-conf-plugin-file.js",
   "scripts": {
